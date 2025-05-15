@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" />
+    <fragment
+        android:id="@+id/foodPageFragment"
+        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.FoodPageFragment"
+        android:label="fragment_food_page"
+        tools:layout="@layout/fragment_food_page" />
+    <fragment
+        android:id="@+id/wherePageFragment"
+        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.WherePageFragment"
+        android:label="fragment_where_page"
+        tools:layout="@layout/fragment_where_page" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/cartPageFragment"
+        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.CartPageFragment"
+        android:label="fragment_cart_page"
+        tools:layout="@layout/fragment_cart_page" />
+</navigation>

@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AnındaKuryeApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Mor rengi kaldır -->
+        <item name="colorPrimary">#D52121</item>
+        <item name="colorPrimaryVariant">#FFFFFF</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <!-- BOTTOM NAV seçili icon rengi -->
+        <item name="colorControlActivated">#D52121</item> <!-- veya istediğin kırmızı -->
+
+        <!-- Unselected ikonlar için -->
+        <item name="colorControlNormal">#9B9B9B</item>
+    </style>
+
+    <style name="Theme.AnındaKuryeApp" parent="Base.Theme.AnındaKuryeApp" />
+
+    <style name="BottomNavTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="fontFamily">@font/dyna_puff</item> <!-- İsteğe bağlı -->
+        <item name="android:textSize">10sp</item>        <!-- Burada boyutu ayarlarsın -->
+    </style>
+</resources>

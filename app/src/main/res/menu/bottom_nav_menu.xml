@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/main_page_icon_selectro"
+        android:iconTint="@null"
+        android:title="Ana Sayfa"/>
+
+    <item
+        android:id="@+id/nav_food"
+        android:icon="@drawable/food_icon_selector"
+        android:iconTint="@null"
+        android:title="Yemek" />
+
+    <item
+        android:id="@+id/nav_where"
+        android:icon="@drawable/where_icon_selector"
+        android:iconTint="@null"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_cart"
+        android:icon="@drawable/cart_icon_selector"
+        android:iconTint="@null"
+        android:title="Sepet" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_icon_selector"
+        android:iconTint="@null"
+        android:title="Profil" />
+</menu>
