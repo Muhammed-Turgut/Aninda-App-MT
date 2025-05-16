@@ -26,7 +26,7 @@
         android:layout_height="68dp"
         android:background="@color/white"
         app:itemActiveIndicatorStyle="@null"
-        app:itemIconSize="24dp"
+        app:itemIconSize="20dp"
         app:itemRippleColor="@android:color/transparent"
         app:itemIconTint="@null"
         app:itemTextColor="#D52121"

@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.muhammedturgut.AnndaKuryeAppMT"
+    namespace = "com.muhammedturgut.anndakuryeappmt"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.muhammedturgut.AnndaKuryeAppMT"
-        minSdk = 27
+        applicationId = "com.muhammedturgut.anndakuryeappmt"
+        minSdk = 28
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -45,9 +45,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.car.ui.lib)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.5")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
     implementation("androidx.activity:activity-ktx:1.6.1")
