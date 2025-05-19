@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Başlık -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anında"
+            android:textSize="54sp"
+            android:fontFamily="@font/dyna_puff"
+            android:textStyle="bold"
+            android:textColor="#171D1B"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Başlık -->
+        <TextView
+            android:id="@+id/tvRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kayit Ol"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#D72323"
+            android:layout_marginBottom="20dp" />
+
+        <!-- İsim -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="#D72323"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true"
+            android:hint="İsim" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- E-posta -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxStrokeColor="#D72323"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="true"
+            android:hint="E-posta" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Şifre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxStrokeColor="#D72323"
+            app:boxStrokeWidth="2dp"
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="true"
+            android:hint="Şifre" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="şifremi unutum" />
+
+        <!-- Kayıt Ol Butonu -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Kayıt Ol"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#303841"
+            app:cornerRadius="8dp" />
+
+        <!-- Giriş Sayfasına Bağlantı -->
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="veya" />
+
+        <ImageView
+            android:id="@+id/withGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/google_icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goolge ile devam et"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLoginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bir hesabın var mı? Giriş Yap "
+            android:textColor="#5C5C5C"
+            android:layout_marginTop="18dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -12,7 +12,9 @@ import com.muhammedturgut.anndakuryeappmt.databinding.FragmentFoodPageBinding
 import com.muhammedturgut.anndakuryeappmt.ui.Adapter.FoodsPageHeaderAdapter
 import com.muhammedturgut.anndakuryeappmt.ui.Adapter.FoodsPopulerAdapter
 import com.muhammedturgut.anndakuryeappmt.ui.Model.FoodPagePopulerModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FoodPageFragment : Fragment() {
 
     private lateinit var binding: FragmentFoodPageBinding

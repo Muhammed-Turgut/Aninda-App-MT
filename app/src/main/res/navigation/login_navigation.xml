@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/splasScreenFragment">
+
+    <fragment
+        android:id="@+id/splasScreenFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.SplasScreenFragment"
+        android:label="fragment_splas_screen"
+        tools:layout="@layout/fragment_splas_screen" >
+        <action
+            android:id="@+id/SpalsScreenGoLoginScreen"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" />
+</navigation>

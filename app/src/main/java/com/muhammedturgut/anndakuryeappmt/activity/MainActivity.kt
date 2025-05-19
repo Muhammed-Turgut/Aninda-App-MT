@@ -11,8 +11,9 @@ import com.muhammedturgut.anndakuryeappmt.ui.frgamnet.FoodPageFragment
 import com.muhammedturgut.anndakuryeappmt.ui.frgamnet.MainPageFragment
 import com.muhammedturgut.anndakuryeappmt.ui.frgamnet.ProfileFragment
 import com.muhammedturgut.anndakuryeappmt.ui.frgamnet.WherePageFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 

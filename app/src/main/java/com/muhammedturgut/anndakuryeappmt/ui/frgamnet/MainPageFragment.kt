@@ -12,8 +12,9 @@ import com.muhammedturgut.anndakuryeappmt.R
 import com.muhammedturgut.anndakuryeappmt.databinding.FragmentMainPageBinding
 import com.muhammedturgut.anndakuryeappmt.ui.Adapter.MostPopularAdapter
 import com.muhammedturgut.anndakuryeappmt.ui.Model.MostPopularModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainPageFragment : Fragment() {
 
     private lateinit var binding: FragmentMainPageBinding
