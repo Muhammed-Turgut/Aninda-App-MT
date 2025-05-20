@@ -9,7 +9,7 @@ import com.muhammedturgut.anndakuryeappmt.R
 import dagger.hilt.android.AndroidEntryPoint
 
 
-@AndroidEntryPoint
+
 class WherePageFragment : Fragment() {
 
 

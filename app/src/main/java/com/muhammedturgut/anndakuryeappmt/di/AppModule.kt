@@ -3,8 +3,12 @@ package com.muhammedturgut.anndakuryeappmt.di
 import android.app.Application
 import android.content.Context
 import androidx.room.Room
+import com.muhammedturgut.anndakuryeapp.data.repo.FoodRepository
 import com.muhammedturgut.anndakuryeappmt.data.dataSource.DataSource
+import com.muhammedturgut.anndakuryeappmt.data.dataSource.DataSourceRetrofit
 import com.muhammedturgut.anndakuryeappmt.data.repo.SaveRepostiory
+import com.muhammedturgut.anndakuryeappmt.retrofit.ApiUtils
+import com.muhammedturgut.anndakuryeappmt.retrofit.FoodDao
 import com.muhammedturgut.anndakuryeappmt.room.UserDao
 import com.muhammedturgut.anndakuryeappmt.room.UserDataBase
 import dagger.Module
@@ -39,5 +43,23 @@ class AppModule {
            .build()
 
         return dataBase.getSaveDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideFoodRepository(foodDataSource: DataSourceRetrofit) : FoodRepository{
+        return FoodRepository(foodDataSource)
+    }
+
+    @Provides
+    @Singleton
+    fun provideFoodDataSource(foodDao: FoodDao) : DataSourceRetrofit {
+        return DataSourceRetrofit(foodDao)
+    }
+
+    @Provides
+    @Singleton
+    fun provideFoodDao() : FoodDao {
+        return ApiUtils.getFoodDao()
     }
 }

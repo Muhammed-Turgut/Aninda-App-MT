@@ -1,0 +1,9 @@
+<!-- res/drawable/toggle_button_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+    <stroke
+        android:width="2dp"
+        android:color="#D72323" />
+    <corners android:radius="50dp" />
+</shape>

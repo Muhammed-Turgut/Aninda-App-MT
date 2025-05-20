@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.muhammedturgut.anndakuryeapp.ui.Adapter.CategoryViewAdapter
@@ -12,12 +13,16 @@ import com.muhammedturgut.anndakuryeappmt.R
 import com.muhammedturgut.anndakuryeappmt.databinding.FragmentMainPageBinding
 import com.muhammedturgut.anndakuryeappmt.ui.Adapter.MostPopularAdapter
 import com.muhammedturgut.anndakuryeappmt.ui.Model.MostPopularModel
+import com.muhammedturgut.anndakuryeappmt.ui.viewModel.MainPageViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.getValue
 
 @AndroidEntryPoint
 class MainPageFragment : Fragment() {
 
     private lateinit var binding: FragmentMainPageBinding
+    private lateinit var viewModel: MainPageViewModel
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -25,10 +30,10 @@ class MainPageFragment : Fragment() {
 // ViewModel burada başlatılıyor ✅
 
 
-
-
-        val foodMostPopularAdapterAdapter = MostPopularAdapter(requireContext(),list)
-        binding.recyclerViewMostPopuler.adapter = foodMostPopularAdapterAdapter
+        viewModel.foodList.observe(viewLifecycleOwner) {
+            val foodAdapter = MostPopularAdapter(requireContext(),it,viewModel)
+            binding.recyclerViewMostPopuler.adapter = foodAdapter
+        }
         binding.recyclerViewMostPopuler.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
 
         val foodCategoryViewAdapter = CategoryViewAdapter(requireContext(),categoryList)
@@ -39,16 +44,18 @@ class MainPageFragment : Fragment() {
         return binding.root
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val tempViewModel: MainPageViewModel by viewModels()
+        viewModel = tempViewModel
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.foodList
+    }
+
 }
-val list = listOf(
-    MostPopularModel(R.drawable.sut, "Süt"),
-    MostPopularModel(R.drawable.doner, "Döner"),
-    MostPopularModel(R.drawable.camasir_suyu, "Çamaşır Suyu"),
-    MostPopularModel(R.drawable.ekmek, "Ekmek"),
-    MostPopularModel(R.drawable.cerez, "Çerez"),
-    MostPopularModel(R.drawable.kokorec, "Kokoreç"),
-    MostPopularModel(R.drawable.tantuni, "Tantuni")
-)
 
 val categoryList = listOf(
     MostPopularModel(R.drawable.kahvalti,"Kahvaltı"),
