@@ -26,4 +26,17 @@ class CartPageViewModel @Inject constructor(var foodRepository: FoodRepository,s
             }
         }
     }
+
+    fun subtractToFoodCart(sepet_yemek_id:Int,kullanici_adi: String){
+        CoroutineScope(Dispatchers.Main).launch {
+            try {
+                foodRepository.subtractToFoodCart(sepet_yemek_id,kullanici_adi)
+                foodCartLoad(kullanici_adi)
+            }catch (e: Exception){
+
+            }
+        }
+    }
+
+
 }

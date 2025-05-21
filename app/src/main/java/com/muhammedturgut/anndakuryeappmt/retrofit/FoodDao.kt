@@ -30,4 +30,11 @@ interface FoodDao {
     @FormUrlEncoded
     suspend fun getToCartFood(@Field("kullanici_adi") kullanici_adi: String): FoodRequestCart
 
+    @POST("yemekler/sepettenYemekSil.php")
+    @FormUrlEncoded
+    suspend fun subtractToFoodCart( @Field("sepet_yemek_id") sepet_yemek_id: Int,
+                                    @Field("kullanici_adi") kullanici_adi: String)
+
+
+
 }

@@ -9,10 +9,14 @@ import com.bumptech.glide.Glide
 import com.muhammedturgut.anndakuryeappmt.data.entity.CartFood
 import com.muhammedturgut.anndakuryeappmt.databinding.MyCartRowBinding
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.CartPageViewModel
+import com.muhammedturgut.anndakuryeappmt.ui.viewModel.LoginScreenViewModel
+
+
 
 class FoodCartAdapter(var mContext: Context,
                       var viewModel: CartPageViewModel,
-                      var list: List<CartFood>) : RecyclerView.Adapter<FoodCartAdapter.RecyclerRowFood>() {
+                      var list: List<CartFood>,
+                      var userView: LoginScreenViewModel) : RecyclerView.Adapter<FoodCartAdapter.RecyclerRowFood>() {
 
     inner class RecyclerRowFood(var design: MyCartRowBinding): RecyclerView.ViewHolder(design.root)
 
@@ -36,8 +40,13 @@ class FoodCartAdapter(var mContext: Context,
         t.foodQuentityCart.text = food.yemek_siparis_adet.toString()
         showeImage(food.yemek_resim_adi,t.foodImageCart,mContext)
 
-        t.deleteFoodCart.setOnClickListener {
-
+        t.deletFoodCart.setOnClickListener {
+            val userEmail = userView.user.value?.userEmail
+            if (!userEmail.isNullOrEmpty()) {
+                viewModel.subtractToFoodCart(food.sepet_yemek_id.toInt(),userEmail)
+            } else {
+                println("Kullanıcı bilgisi bulunamadı.")
+            }
         }
 
     }

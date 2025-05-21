@@ -23,6 +23,7 @@ class CartPageFragment : Fragment() {
     private lateinit var binding: FragmentCartPageBinding
     private lateinit var viewModel: CartPageViewModel
     private lateinit var viewModelUser: LoginScreenViewModel
+
     private var userName: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +46,8 @@ class CartPageFragment : Fragment() {
             val foodAdapter = FoodCartAdapter(
                 requireContext(),
                 viewModel,
-                it
+                it,
+                viewModelUser
             )
             binding.rcartPageView.adapter = foodAdapter
         }
@@ -71,6 +73,7 @@ class CartPageFragment : Fragment() {
 
         if (userName.isNotEmpty()) {
             viewModel.foodCartLoad(userName)
+            viewModelUser.user
         }
     }
 }

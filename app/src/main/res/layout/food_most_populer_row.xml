@@ -165,7 +165,7 @@
             android:padding="4dp">
 
             <ImageButton
-                android:id="@+id/button_decrease"
+                android:id="@+id/buttonAzalt"
                 android:layout_width="14dp"
                 android:layout_height="14dp"
                 android:background="@drawable/rounded_button_bg"
@@ -184,7 +184,7 @@
                 android:textStyle="bold" />
 
             <ImageButton
-                android:id="@+id/button_increase"
+                android:id="@+id/buttonArtır"
                 android:layout_width="14dp"
                 android:layout_height="14dp"
                 android:background="@drawable/rounded_button_bg"

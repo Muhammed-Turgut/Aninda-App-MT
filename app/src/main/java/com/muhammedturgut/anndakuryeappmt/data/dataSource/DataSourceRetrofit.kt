@@ -24,6 +24,11 @@ class DataSourceRetrofit(var foodDao: FoodDao){
     suspend fun getToCartFood(kullanici_adi:String) : List<CartFood> = withContext(Dispatchers.IO){
 
         return@withContext foodDao.getToCartFood(kullanici_adi).sepet_yemekler
+    }
+
+    suspend fun subtractToFoodCart(sepet_yemek_id: Int, kullaniciAdi: String){
+
+        val crudRequest = foodDao.subtractToFoodCart(sepet_yemek_id = sepet_yemek_id, kullanici_adi = kullaniciAdi)
 
     }
 }

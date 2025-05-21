@@ -37,6 +37,11 @@ class FoodRepository(var foodDataSource: DataSourceRetrofit) {
         }
     }
 
+    suspend fun subtractToFoodCart(sepet_yemek_id:Int,kullanici_adi: String){
+        foodDataSource.subtractToFoodCart(sepet_yemek_id,kullanici_adi)
+        getAllCartFoodLoad(kullanici_adi)
+    }
+
 }
 
 
