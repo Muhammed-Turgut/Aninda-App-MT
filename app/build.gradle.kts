@@ -57,7 +57,8 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
     implementation("androidx.activity:activity-ktx:1.6.1")
-    implementation ("com.google.android.material:material:1.9.0")
+    implementation ("com.google.android.material:material:1.10.0")
+
     implementation ("com.github.bumptech.glide:glide:4.16.0")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.5.1")
