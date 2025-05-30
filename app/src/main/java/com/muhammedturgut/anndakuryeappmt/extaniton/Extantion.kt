@@ -5,10 +5,12 @@ import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 
-fun Navigation.gecisYap(it: View,id:Int){
-    findNavController(it).navigate(id)
+
+
+fun View.gecisYap(id: Int) {
+    Navigation.findNavController(this).navigate(id)
 }
 
-fun Navigation.gecisYap(it: View,id: NavDirections){
-    findNavController(it).navigate(id)
+fun View.gecisYap(navDirections: NavDirections) {
+    Navigation.findNavController(this).navigate(navDirections)
 }

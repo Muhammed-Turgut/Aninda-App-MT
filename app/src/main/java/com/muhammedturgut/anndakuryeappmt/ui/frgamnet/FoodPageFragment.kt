@@ -15,6 +15,7 @@ import com.muhammedturgut.anndakuryeappmt.ui.Adapter.FoodsPopulerAdapter
 import com.muhammedturgut.anndakuryeappmt.ui.Model.FoodPagePopulerModel
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.FoodPageViewModel
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.LoginScreenViewModel
+import com.muhammedturgut.anndakuryeappmt.ui.viewModel.MainActivtyStarViewModel
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.MainPageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.getValue

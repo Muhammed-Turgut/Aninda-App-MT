@@ -2,18 +2,25 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="40dp"
+    android:layout_height="30dp"
     android:layout_marginStart="4dp"
     android:layout_marginEnd="4dp"
-    android:backgroundTint="#D32121"
-    app:cardCornerRadius="100dp">
+    app:cardCornerRadius="100dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent"> <!-- önemli -->
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="12sp"
         android:text="Tavuk Döner"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:cornerRadius="20dp" />
+        android:textColor="@color/black"
+        android:background="@drawable/food_page_strok_button"
+        android:backgroundTint="@color/black"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textStyle="bold" />
 </androidx.cardview.widget.CardView>

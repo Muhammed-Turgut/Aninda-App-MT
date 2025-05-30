@@ -14,6 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -24,8 +26,7 @@
             android:id="@+id/imageView12"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="114dp"
-            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
             android:src="@drawable/cart_icon_selected" />
 
         <TextView
@@ -33,7 +34,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dyna_puff"
+            android:layout_gravity="center"
             android:text="Sepetim"
+            android:layout_marginStart="4dp"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>

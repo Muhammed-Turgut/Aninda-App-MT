@@ -37,6 +37,4 @@ class CartPageViewModel @Inject constructor(var foodRepository: FoodRepository,s
             }
         }
     }
-
-
 }

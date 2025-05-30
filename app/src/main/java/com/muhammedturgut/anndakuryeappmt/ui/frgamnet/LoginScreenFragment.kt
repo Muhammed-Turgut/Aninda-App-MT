@@ -8,9 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import com.muhammedturgut.anndakuryeappmt.R
 import com.muhammedturgut.anndakuryeappmt.activity.MainActivity
-import com.muhammedturgut.anndakuryeappmt.data.entity.User
 import com.muhammedturgut.anndakuryeappmt.databinding.FragmentLoginScreenBinding
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.LoginScreenViewModel
 import dagger.hilt.android.AndroidEntryPoint

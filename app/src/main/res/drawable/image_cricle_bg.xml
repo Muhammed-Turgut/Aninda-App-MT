@@ -15,8 +15,8 @@
         android:type="linear"
         android:useLevel="false"
         android:angle="0"
-        android:startColor="#EAFF00"
-        android:endColor="#D72323" />
+        android:startColor="#F4F4F4"
+        android:endColor="#F4F4F4" />
 
     <!-- Boyut (isteğe bağlı) -->
     <size

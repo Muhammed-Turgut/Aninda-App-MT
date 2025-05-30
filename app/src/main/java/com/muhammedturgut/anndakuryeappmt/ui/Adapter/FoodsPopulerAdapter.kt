@@ -2,17 +2,29 @@ package com.muhammedturgut.anndakuryeappmt.ui.Adapter
 
 import android.R
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.muhammedturgut.anndakuryeappmt.activity.Detials
+import com.muhammedturgut.anndakuryeappmt.activity.MainActivity
+
 import com.muhammedturgut.anndakuryeappmt.data.entity.GetAllFoods
 import com.muhammedturgut.anndakuryeappmt.databinding.FoodMostPopulerRowBinding
-import com.muhammedturgut.anndakuryeappmt.ui.Model.FoodPagePopulerModel
+import com.muhammedturgut.anndakuryeappmt.extaniton.gecisYap
+import com.muhammedturgut.anndakuryeappmt.ui.frgamnet.FoodPageFragmentDirections
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.FoodPageViewModel
 import com.muhammedturgut.anndakuryeappmt.ui.viewModel.LoginScreenViewModel
+import com.muhammedturgut.anndakuryeappmt.ui.viewModel.MainActivtyStarViewModel
+
 
 class FoodsPopulerAdapter(
     var mContext: Context,
@@ -52,6 +64,15 @@ class FoodsPopulerAdapter(
                 t.orderQuantity.text = quantity.toString()
             }
         }
+
+        t.detailsFood.setOnClickListener { _ ->
+            val intent = Intent(mContext, Detials::class.java)
+            startActivity(intent)
+        }
+
+
+
+
 
         // Yemek bilgileri
         t.foodName.text = food.yemek_adi

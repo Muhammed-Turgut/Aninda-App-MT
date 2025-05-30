@@ -7,27 +7,40 @@
 
     <fragment
         android:id="@+id/mainPageFragment"
-        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.MainPageFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.MainPageFragment"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" />
     <fragment
         android:id="@+id/foodPageFragment"
-        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.FoodPageFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.FoodPageFragment"
         android:label="fragment_food_page"
-        tools:layout="@layout/fragment_food_page" />
+        tools:layout="@layout/fragment_food_page" >
+        <action
+            android:id="@+id/action_foodPageFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/wherePageFragment"
-        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.WherePageFragment"
+        android:name= "com.muhammedturgut.anndakuryeappmt.ui.frgamnet.WherePageFragment"
         android:label="fragment_where_page"
         tools:layout="@layout/fragment_where_page" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.ProfileFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/cartPageFragment"
-        android:name="com.vrstressroom.anndakuryeapp.ui.frgamnet.CartPageFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.CartPageFragment"
         android:label="fragment_cart_page"
         tools:layout="@layout/fragment_cart_page" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.muhammedturgut.anndakuryeappmt.ui.frgamnet.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="food"
+            app:argType="com.muhammedturgut.anndakuryeappmt.data.entity.GetAllFoods" />
+    </fragment>
 </navigation>
